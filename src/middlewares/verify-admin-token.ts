@@ -2,7 +2,7 @@ import express from 'express'
 import { StatusCodes } from 'http-status-codes';
 import jwt from 'jsonwebtoken'
 
-const verifyToken = (req: express.Request, res: express.Response, next: express.NextFunction): void => {
+const verifyAdminToken = (req: express.Request, res: express.Response, next: express.NextFunction): void => {
 
   var token = req.headers['x-access-token'] || req.headers['authorization'];
   if (!token)
@@ -16,4 +16,4 @@ const verifyToken = (req: express.Request, res: express.Response, next: express.
 
 }
 
-export default verifyToken
+export default verifyAdminToken

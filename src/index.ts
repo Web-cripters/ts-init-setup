@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import { enableCorsHeaders } from './middlewares/cors-headers';
 import cookieParser from 'cookie-parser';
 import indexRouter from './routes';
+
 dotenv.config()
 
 const app: express.Application = express();
